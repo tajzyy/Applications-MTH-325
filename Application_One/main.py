@@ -1,15 +1,15 @@
 def is_bipartite(dictionary):
-    in_b = False
+    in_nums = False
     result = True
     nums = []
     for key, value in dictionary.items():
         for i in value:
             if nums.__contains__(key):
-                in_b = True
+                in_nums = True
                 if nums.__contains__(i):
                     result = False
                     return result
-            if not in_b:
+            if not in_nums:
                 nums.append(i)
 
     return result
