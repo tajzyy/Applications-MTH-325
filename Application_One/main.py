@@ -1,18 +1,16 @@
 def is_bipartite(dictionary):
     in_b = False
     result = True
-    group_a = []
-    group_b = []
+    nums = []
     for key, value in dictionary.items():
         for i in value:
-            if group_b.__contains__(key):
+            if nums.__contains__(key):
                 in_b = True
-                if group_b.__contains__(i):
+                if nums.__contains__(i):
                     result = False
                     return result
             if not in_b:
-                group_a.append(i)
-                group_b.append(i)
+                nums.append(i)
 
     return result
 
