@@ -7,9 +7,7 @@ def is_bipartite(dictionary):
         for i in value:
             if group_b.__contains__(key):
                 in_b = True
-                if not group_b.__contains__(i) and not group_a.__contains__(key):
-                    group_b.append(i)
-                elif group_b.__contains__(i):
+                if group_b.__contains__(i):
                     result = False
                     return result
             if not in_b:
