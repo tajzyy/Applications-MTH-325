@@ -8,10 +8,9 @@ def is_reflexive(edge_list):
         list_one.append(node1)
         list_two.append(node2)
 
-    for i in list_one:
-        for j in list_two:
-            if i == j:
-                count += 1
+    for i, j in zip(list_one, list_two):
+        if i == j:
+            count += 1
 
     nodes = [*set(list_one)]
 
@@ -20,8 +19,3 @@ def is_reflexive(edge_list):
         return reflexive
 
     return reflexive
-
-
-
-
-print(is_reflexive([(1, 1), (2, 2), (3, 3)]))
