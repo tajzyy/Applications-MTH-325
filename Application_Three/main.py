@@ -61,7 +61,6 @@ def is_transitive(edge_list):
             node_list2.append(j)
         if node_list2.__contains__(i):
             node_list3.append(j)
-            count += 1
 
     node_list3 = [*set(node_list3)]
     
