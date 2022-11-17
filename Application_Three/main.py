@@ -12,9 +12,9 @@ def is_reflexive(edge_list):
         if i == j:
             count += 1
 
-    nodes = [*set(list_one)]
+    list_one = [*set(list_one)]
 
-    if nodes.__len__() != count:
+    if list_one.__len__() != count:
         reflexive = False
         return reflexive
 
