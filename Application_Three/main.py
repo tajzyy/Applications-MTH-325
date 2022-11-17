@@ -25,7 +25,6 @@ def is_symmetric(edge_list):
     symmetric = True
     list_one, list_two = [], []
     node_list1, node_list2 = [], []
-    count = 0
 
     for edge in edge_list:
         node1, node2 = edge
@@ -45,3 +44,29 @@ def is_symmetric(edge_list):
         return symmetric
 
     return symmetric
+
+
+def is_transitive(edge_list):
+    transitive = True
+    list_one, list_two = [], []
+    node_list1, node_list2, node_list3 = [], [], []
+
+    for edge in edge_list:
+        node1, node2 = edge
+        list_one.append(node1)
+        list_two.append(node2)
+
+    for i, j in zip(list_one, list_two):
+        if i != j and not node_list2.__contains__(i):
+            node_list2.append(j)
+        if node_list2.__contains__(i):
+            node_list3.append(j)
+            count += 1
+
+    node_list3 = [*set(node_list3)]
+    
+    if node_list2 != node_list3:
+        transitive = False
+        return transitive
+
+    return transitive
