@@ -12,9 +12,9 @@ def is_reflexive(edge_list):
         if i == j:
             count += 1
 
-    nodes = [*set(list_one)]
+    list_one = [*set(list_one)]
 
-    if nodes.__len__() != count:
+    if list_one.__len__() != count:
         reflexive = False
         return reflexive
 
@@ -61,7 +61,6 @@ def is_transitive(edge_list):
             node_list2.append(j)
         if node_list2.__contains__(i):
             node_list3.append(j)
-            count += 1
 
     node_list3 = [*set(node_list3)]
     
