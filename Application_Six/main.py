@@ -1,6 +1,5 @@
 def maximal_elements(edge_list):
     maximals = []
-    edge_list.sort()
     count = 0
 
     for edge in edge_list:
@@ -18,7 +17,6 @@ def maximal_elements(edge_list):
 
 def greatest_element(edge_list):
     greatest = []
-    edge_list.sort()
     count = 0
 
     for edge in edge_list:
