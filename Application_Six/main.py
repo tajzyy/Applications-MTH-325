@@ -18,8 +18,8 @@ def maximal_elements(poset):
 def greatest_element(poset):
     greatest = maximal_elements(poset)
     
-    if greatest.__len__() > 1
-        greatest.clear
+    if greatest.__len__() > 1:
+        greatest.clear()
         
     return greatest
 
