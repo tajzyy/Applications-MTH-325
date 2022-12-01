@@ -16,22 +16,11 @@ def maximal_elements(edge_list):
 
 
 def greatest_element(edge_list):
-    greatest = []
-    count = 0
-
-    for edge in edge_list:
-        for i in edge_list:
-            if i % edge == 0:
-                count += 1
-        if count == 1:
-            greatest.append(edge)
-            count = 0
-        else:
-            count = 0
-
-    if greatest.__len__() > 1:
-        greatest.clear()
-
+    greatest = maximal_elements(edge_list)
+    
+    if greatest.__len__() > 1
+        greatest.clear
+        
     return greatest
 
 
