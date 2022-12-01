@@ -1,13 +1,13 @@
-def maximal_elements(edge_list):
+def maximal_elements(poset):
     maximals = []
     count = 0
 
-    for edge in edge_list:
-        for i in edge_list:
-            if i % edge == 0:
+    for i in poset:
+        for j in poset:
+            if j % i == 0:
                 count += 1
         if count == 1:
-            maximals.append(edge)
+            maximals.append(i)
             count = 0
         else:
             count = 0
@@ -15,8 +15,8 @@ def maximal_elements(edge_list):
     return maximals
 
 
-def greatest_element(edge_list):
-    greatest = maximal_elements(edge_list)
+def greatest_element(poset):
+    greatest = maximal_elements(poset)
     
     if greatest.__len__() > 1
         greatest.clear
